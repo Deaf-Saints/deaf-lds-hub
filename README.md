@@ -69,3 +69,60 @@ kill <PID>
 ```
 
 - To stop the dev server: press Ctrl+C in the terminal running `npm run dev`.
+
+---
+
+## Run with Docker
+
+You can run the app in a Docker container instead of installing Node.js locally.
+
+### Install Docker Desktop
+
+1. Download Docker Desktop for your operating system:
+   - **Windows**: https://docs.docker.com/desktop/setup/install/windows-install/
+   - **Mac**: https://docs.docker.com/desktop/setup/install/mac-install/
+   - **Linux**: https://docs.docker.com/desktop/setup/install/linux/
+
+2. Run the installer and follow the prompts.
+
+3. After installation, start Docker Desktop and wait for it to fully initialize (the Docker icon in your system tray should show "running").
+
+4. Verify the installation by opening a terminal and running:
+
+```bash
+docker --version
+docker compose version
+```
+
+### Run the app with Docker Compose
+
+From the project root, start the app:
+
+```bash
+docker compose up
+```
+
+This will:
+- Pull the Node.js image (first run only)
+- Install dependencies
+- Start the development server
+
+Open http://localhost:3000 in your browser.
+
+To stop the container, press `Ctrl+C` or run:
+
+```bash
+docker compose down
+```
+
+To run in detached mode (background):
+
+```bash
+docker compose up -d
+```
+
+To view logs when running in detached mode:
+
+```bash
+docker compose logs -f
+```
