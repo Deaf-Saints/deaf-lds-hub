@@ -1,0 +1,61 @@
+site_name: Docker Documentation
+site_description: Learn how to use Docker from basics to advanced concepts
+site_author: Your Name
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Your First Container: getting-started/first-container.md
+  - Core Concepts:
+      - Images: concepts/images.md
+      - Containers: concepts/containers.md
+      - Volumes: concepts/volumes.md
+      - Networks: concepts/networks.md
+  - Commands:
+      - Basic Commands: commands/basic.md
+      - Advanced Commands: commands/advanced.md
+  - Docker Compose:
+      - Introduction: docker-compose/introduction.md
+      - Examples: docker-compose/examples.md
+  - Dockerfile:
+      - Writing Dockerfiles: dockerfile/writing.md
+      - Best Practices: dockerfile/best-practices.md
+  - Best Practices: best-practices.md
